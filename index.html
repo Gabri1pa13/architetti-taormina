@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    
+    <title>Architetti Taormina | Luxury & Hospitality | Studio 4e</title>
+    <meta content="Architetti a Taormina per investitori e privati. Progettazione Hotel, Boutique e Ville di lusso. Gestione vincoli e logistica complessa. Studio 4e." name="description"/>
+    <meta content="#1a1a1a" name="theme-color"/>
+
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+    <link href="assets/images/favicon.png" rel="icon" type="image/png"/>
+    
+    <meta content="it_IT" property="og:locale"/>
+    <meta content="website" property="og:type"/>
+    <meta content="Architetti Taormina | Studio 4e" property="og:title"/>
+    <meta content="Progettazione e gestione investimenti immobiliari a Taormina. Hotel, Retail e Ville." property="og:description"/>
+    <meta content="https://architettitaormina.com/assets/images/interni-villa-di-sera.webp" property="og:image"/>
+
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Architect", "name": "Studio 4e - Divisione Taormina", "url": "https://www.studio4e.it/", "telephone": "+39 329 973 6697", "email": "info@studio4e.it", "address": {"@type": "PostalAddress", "addressLocality": "Palermo", "addressRegion": "Sicilia", "addressCountry": "IT"}, "areaServed": ["Taormina", "Castelmola", "Giardini Naxos", "Mazzarò", "Isola Bella"], "priceRange": "$$$"}</script>
+
+    <link href="assets/css/styles.css" rel="stylesheet"/>
+
+    <style>
+        /* Floating Action Button (Mobile) */
+        .mobile-contact {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 9999;
+        }
+
+        /* Il Bottone Rotondo */
+        .mobile-contact__fab {
+            list-style: none; /* Rimuove il triangolino standard di details */
+            background: #25D366; /* Colore WhatsApp/Azione */
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        .mobile-contact__fab::-webkit-details-marker { display: none; }
+        .mobile-contact__fab:hover { transform: scale(1.1); }
+
+        .mobile-contact__icon svg {
+            width: 32px;
+            height: 32px;
+            fill: white;
+        }
+
+        /* Il Menu che si apre */
+        .mobile-contact__menu {
+            position: absolute;
+            bottom: 70px;
+            right: 0;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            width: 260px;
+            padding: 10px 0;
+            overflow: hidden;
+            border: 1px solid #eee;
+            /* Animazione apertura */
+            transform-origin: bottom right;
+            animation: popUp 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .mobile-contact__item {
+            display: block;
+            padding: 12px 20px;
+            color: #333;
+            font-weight: 500;
+            font-size: 0.95rem;
+            border-bottom: 1px solid #f5f5f5;
+            transition: background 0.2s;
+        }
+        .mobile-contact__item:last-child { border-bottom: none; }
+        .mobile-contact__item:hover { background: #f9f9f9; color: var(--primary); }
+
+        @keyframes popUp {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* Nascondi su desktop se preferisci */
+        @media(min-width: 768px) {
+            .mobile-contact { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <header class="header">
+        <div class="container header-row">
+            <a href="index.html" class="brand">
+                <img src="assets/images/studio4e-logo.png" width="40" alt="Studio 4e">
+                <div>Architetti Taormina<br><small style="font-size:0.6em; color:#999;">Divisione Studio 4e</small></div>
+            </a>
+            <nav class="nav">
+                <a href="guide.html#hospitality">Hospitality & Retail</a>
+                <a href="guide.html#villas">Luxury Villas</a>
+                <a href="guide.html">Guides (100)</a>
+                <a href="https://www.studio4e.it" target="_blank">Studio 4e</a>
+                <span class="lang-switch"><a href="guide.html#en">EN</a> / IT</span>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container hero-grid">
+            <div>
+                <span class="h-tag">Luxury Real Estate & Project Management</span>
+                <h1 class="h-title">L'eccellenza tecnica dietro il Lusso.</h1>
+                <p class="h-sub">Progettazione e Direzione Lavori per Hospitality e Luxury Retail. Conosciamo il territorio, i vincoli e la logistica per portare a termine cantieri complessi.</p>
+                <div>
+                    <a href="https://wa.me/393299736697" class="btn">Parla con un Architetto</a>
+                    <a href="guide.html#en" class="btn outline">International Investors</a>
+                </div>
+            </div>
+            <div>
+                <img src="assets/images/interni-villa-di-sera.webp" alt="Luxury Villa Design Taormina" style="width:100%; border-radius:2px; box-shadow: 0 30px 60px rgba(0,0,0,0.5);">
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="services">
+        <div class="container">
+            <div style="display:flex; justify-content:space-between; align-items:end; flex-wrap:wrap; gap:20px;">
+                <div>
+                    <h2>Progettazione <b>Hospitality & Retail</b></h2>
+                    <p style="color:#666; max-width:600px;">Interventi sartoriali nel rispetto dei vincoli storici e paesaggistici.</p>
+                </div>
+                <a href="guide.html" style="border-bottom:1px solid var(--gold); padding-bottom:5px; color:var(--dark); font-weight:600;">Vedi le 100 Guide Tecniche →</a>
+            </div>
+            
+            <div class="grid-3">
+                <a href="guide.html#hospitality" class="card">
+                    <div class="card-img">
+                        <img src="assets/images/ristorante-sushi-palermo.webp" alt="Boutique Hotel Design Taormina">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-cat">Hospitality</span>
+                        <h3>Boutique Hotel & Resort</h3>
+                        <p>Dallo studio di fattibilità al design degli interni. Gestione normativa antincendio e barriere architettoniche in edifici storici.</p>
+                    </div>
+                </a>
+
+                <a href="guide.html#retail" class="card">
+                    <div class="card-img">
+                        <img src="assets/images/wine-cellar-sicilia.webp" alt="Luxury Retail Taormina">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-cat">Luxury Retail</span>
+                        <h3>Boutique Corso Umberto</h3>
+                        <p>Progettazione spazi commerciali di lusso. Gestione logistica cantiere in ZTL e permessi Soprintendenza per vetrine.</p>
+                    </div>
+                </a>
+
+                <a href="guide.html#villas" class="card">
+                    <div class="card-img">
+                        <img src="assets/images/villa-moderna-con-spazi-verdi.webp" alt="Villa con piscina Taormina">
+                    </div>
+                    <div class="card-body">
+                        <span class="card-cat">Private Estates</span>
+                        <h3>Ville & Piscine a Sfioro</h3>
+                        <p>Costruire sul pendio. Ingegneria strutturale per piscine, consolidamento terreni e design paesaggistico.</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section int-section">
+        <div class="container">
+            <div class="grid-3" style="grid-template-columns: 1fr 1.2fr; align-items:center; gap:80px; margin-top:0;">
+                <div>
+                    <span class="h-tag" style="color:var(--dark);">For Foreign Buyers</span>
+                    <h2>International<br><b>Investors</b></h2>
+                    <p style="margin-bottom:30px; font-size:1.1rem; color:#555;">Taormina is a unique market with specific challenges. We act as your local technical partner to ensure your investment is secure and compliant.</p>
+                    <a href="guide.html#en" class="btn" style="background:var(--dark);">English Technical Guides</a>
+                </div>
+                <div style="background:white; padding:40px; border:1px solid #eee; box-shadow: 0 10px 30px rgba(0,0,0,0.05);">
+                    <h3 style="margin-top:0; margin-bottom:20px; font-size:1.5rem;">Safe Buy Protocol</h3>
+                    <ul class="feature-list" style="list-style:none; padding:0; margin:0;">
+                        <li>
+                            <strong>✅ Technical Due Diligence:</strong> Checking urban planning compliance (Sanatoria) before you make an offer.
+                        </li>
+                        <li>
+                            <strong>✅ Structural Analysis:</strong> Evaluating seismic stability of historic palazzos and cliffside villas.
+                        </li>
+                        <li style="border-bottom:none;">
+                            <strong>✅ Cost Control:</strong> Realistic "Computo Metrico" to avoid budget overruns in a high-cost area.
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="grid-3" style="margin-top:0; gap:60px;">
+                <div>
+                    <strong style="color:white; text-transform:uppercase; letter-spacing:1px; font-size:1.1rem;">Architetti Taormina</strong>
+                    <p style="margin-top:15px;">Powered by Studio 4e. <br>Technical excellence for high-end projects.</p>
+                </div>
+                <div>
+                    <h4>Contact Us</h4>
+                    <a href="https://wa.me/393299736697" class="footer-cta">WhatsApp: +39 329 973 6697</a>
+                    <a href="mailto:info@studio4e.it" style="display:block; margin-bottom:10px; font-size:1.1rem;">info@studio4e.it</a>
+                    <p>Piazza Sant'Oliva 19, Palermo<br>Active in Taormina & Messina</p>
+                </div>
+                <div>
+                    <h4>Resources</h4>
+                    <a href="guide.html" style="display:block; margin-bottom:10px;">100 Technical Guides</a>
+                    <a href="https://www.studio4e.it" target="_blank" style="display:block; margin-bottom:10px;">Studio 4e Portfolio</a>
+                    <a href="#" style="display:block;">Privacy Policy</a>
+                </div>
+            </div>
+            <div style="margin-top:60px; border-top:1px solid #333; padding-top:30px; font-size:0.8rem; display:flex; justify-content:space-between;">
+                <span>© 2026 Studio 4e. All rights reserved.</span>
+                <span>Partita IVA: Disponibile sul sito ufficiale.</span>
+            </div>
+        </div>
+    </footer>
+
+    <details class="mobile-contact">
+        <summary class="mobile-contact__fab" aria-label="Contatti rapidi">
+            <span class="mobile-contact__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" role="img" focusable="false" aria-hidden="true">
+                    <path d="M6.62 10.79a15.05 15.05 0 0 0 6.59 6.59l2.2-2.2a1 1 0 0 1 1-.24c1.1.37 2.28.57 3.5.57a1 1 0 0 1 1 1V20a1 1 0 0 1-1 1C10.07 21 3 13.93 3 5a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.22.2 2.4.57 3.5a1 1 0 0 1-.24 1z"/>
+                </svg>
+            </span>
+        </summary>
+        <div class="mobile-contact__menu">
+            <a class="mobile-contact__item" href="https://wa.me/393299736697" target="_blank" rel="noopener">WhatsApp: +39 329 973 6697</a>
+            <a class="mobile-contact__item" href="tel:+393299736697">Chiama: +39 329 973 6697</a>
+            <a class="mobile-contact__item" href="mailto:info@studio4e.it">Email: info@studio4e.it</a>
+        </div>
+    </details>
+
+</body>
+</html>

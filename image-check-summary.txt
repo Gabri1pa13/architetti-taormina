@@ -1,0 +1,6 @@
+rows=100
+matched_by_filename=1
+matched_by_title=96
+no_match=3
+image_mismatch=76
+expected_image_missing=16

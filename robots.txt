@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Non indicizzare il template master
+Disallow: /article-template.html
+Disallow: /assets/
+Disallow: /private/
+
+# Posizione della sitemap
+Sitemap: https://architettitaormina.com/sitemap.xml
