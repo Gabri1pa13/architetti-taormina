@@ -44,7 +44,7 @@ img { max-width: 100%; display: block; }
 
 .grid-3 {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
     gap: 40px;
 }
 
@@ -304,13 +304,39 @@ h1, h2, h3, h4, h5 { margin-top: 0; color: var(--dark); font-weight: 700; }
     background: var(--dark);
     color: white;
 }
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
 .hero h1 { color: white; font-size: 3.5rem; line-height: 1.1; margin-bottom: 25px; font-weight: 300; }
 .hero h1 b { font-weight: 700; }
 .hero p { font-size: 1.2rem; color: #ccc; max-width: 600px; margin-bottom: 40px; }
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
 
 /* SECTIONS */
 .section { padding: 80px 0; }
 .bg-alt { background-color: var(--bg-alt); }
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+.section-link {
+    border-bottom: 1px solid var(--gold);
+    padding-bottom: 5px;
+    color: var(--dark);
+    font-weight: 600;
+    white-space: nowrap;
+}
 
 /* CARDS (LUXURY STYLE) */
 .card {
@@ -373,16 +399,149 @@ article img { border-radius: var(--radius); margin: 30px 0; }
 .footer a:hover { color: var(--gold); }
 .footer-cta { color: var(--gold); font-size: 1.2rem; display: block; margin-bottom: 10px; font-weight: 600; }
 
-/* RESPONSIVE */
+/* INT-SECTION (International Investors) */
+.int-section .int-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    align-items: center;
+    gap: 80px;
+    margin-top: 0;
+}
+.int-section .safe-buy-box {
+    background: white;
+    padding: 40px;
+    border: 1px solid #eee;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* CONTACT PAGE */
+.contact-hero {
+    background: var(--dark);
+    color: white;
+    padding: 60px 0 50px;
+}
+.contact-hero h1 { color: white; font-size: 2.6rem; }
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin: 50px 0;
+}
+.c-item { margin: 25px 0; }
+.c-label { display: block; font-size: 0.8rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 5px; }
+.c-value { font-size: 1.2rem; font-weight: 600; color: var(--gold); }
+.btn-big {
+    display: inline-block;
+    padding: 18px 36px;
+    background: var(--gold);
+    color: white;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: var(--radius);
+    margin-top: 20px;
+    font-size: 1rem;
+}
+.btn-big:hover { background: var(--gold-hover); }
+.office-info {
+    background: var(--bg-alt);
+    padding: 35px;
+    border-radius: var(--radius);
+}
+
+/* FOOTER copyright row */
+.footer-bottom {
+    margin-top: 60px;
+    border-top: 1px solid #333;
+    padding-top: 30px;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* =========================================
+   RESPONSIVE - MOBILE
+   ========================================= */
 @media (max-width: 768px) {
+    /* HEADER */
+    .header { padding: 14px 0; }
     .header-row { flex-direction: column; align-items: flex-start; gap: 12px; }
-    .nav { flex-wrap: wrap; gap: 14px; font-size: 0.85rem; }
-    .hero h1 { font-size: 2.5rem; }
-    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-    .grid-3 { grid-template-columns: 1fr; }
-    .page-header h1 { font-size: 2rem; }
-    .content-grid { grid-template-columns: 1fr; }
+    .nav { flex-wrap: wrap; gap: 10px; font-size: 0.8rem; }
+    .brand { font-size: 0.9rem; letter-spacing: 0.5px; }
+
+    /* HERO */
+    .hero { padding: 60px 0; }
+    .hero h1 { font-size: 2rem; margin-bottom: 15px; }
+    .hero p { font-size: 1rem; margin-bottom: 25px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 30px; }
+    .hero-buttons .btn { width: 100%; justify-content: center; padding: 14px 20px; font-size: 0.8rem; }
+
+    /* SECTIONS */
+    .section { padding: 50px 0; }
+
+    /* GRID / CARDS */
+    .grid-3 { grid-template-columns: 1fr; gap: 25px; }
+    .card-img { height: 200px; }
+    .card-body { padding: 20px; }
+    .card-body h3 { font-size: 1.1rem; }
+    .card-body p { font-size: 0.9rem; }
+
+    /* INTERNATIONAL INVESTORS */
+    .int-section .int-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    .int-section .safe-buy-box {
+        padding: 25px;
+    }
+    .int-section h2 { font-size: 1.8rem; }
+
+    /* FOOTER */
+    .footer { padding: 50px 0 20px; }
+    .footer .grid-3 { gap: 30px; }
+    .footer-bottom { flex-direction: column; gap: 5px; }
+
+    /* PAGE HEADER & GUIDES */
+    .page-header { padding: 40px 0 25px; }
+    .page-header h1 { font-size: 1.8rem; }
+    .guide-section { margin: 30px 0; }
+    .guide-section h2 { font-size: 1.3rem; }
+    .link-item {
+        grid-template-columns: 1fr;
+        padding: 12px 14px;
+    }
+    .link-item strong { font-size: 0.9rem; }
+    .pill { font-size: 0.6rem; padding: 4px 8px; }
+
+    /* ARTICLE PAGES */
+    article { font-size: 1rem; line-height: 1.7; }
+    article h1 { font-size: 1.7rem; line-height: 1.3; }
+    article h2 { font-size: 1.3rem; margin-top: 35px; }
+    .content-grid { grid-template-columns: 1fr; gap: 25px; }
     .sidebar { position: static; }
-    .author-img { width: 96px; max-width: 96px; }
-    .link-item { grid-template-columns: 1fr; }
+    .author-box { padding: 16px; }
+    .author-img { width: 80px; max-width: 80px; }
+    .exec-summary { padding: 18px; }
+    .breadcrumb { font-size: 0.7rem; margin: 12px 0 8px; }
+
+    /* BUTTONS */
+    .btn { padding: 12px 20px; font-size: 0.8rem; }
+
+    /* CONTACT PAGE */
+    .contact-hero { padding: 40px 0 30px; }
+    .contact-hero h1 { font-size: 1.8rem; }
+    .contact-grid { grid-template-columns: 1fr; gap: 30px; margin: 30px 0; }
+    .btn-big { width: 100%; text-align: center; padding: 16px 24px; }
+    .office-info { padding: 25px; }
+}
+
+/* Extra small screens */
+@media (max-width: 400px) {
+    .hero h1 { font-size: 1.6rem; }
+    article h1 { font-size: 1.4rem; }
+    .page-header h1 { font-size: 1.5rem; }
+    .nav { gap: 8px; font-size: 0.75rem; }
+    .container { padding: 0 14px; }
 }
