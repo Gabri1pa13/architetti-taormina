@@ -253,8 +253,28 @@ h1, h2, h3, h4, h5 { margin-top: 0; color: var(--dark); font-weight: 700; }
 .link-item strong { display: block; }
 .link-item small { color: var(--text-light); }
 
+/* BREADCRUMB NAVIGATION */
+.breadcrumb {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.8rem;
+    color: var(--text-light);
+    margin: 20px 0 10px;
+    line-height: 1.4;
+}
+.breadcrumb a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.breadcrumb a:hover {
+    color: var(--gold);
+}
+.breadcrumb span {
+    color: var(--text);
+}
+
 /* ARTICLE LAYOUT */
-.art-header { margin: 30px 0 20px; }
+.art-header { margin: 10px 0 20px; }
 .art-title { margin: 10px 0 8px; }
 .art-meta { color: var(--text-light); font-size: 0.9rem; }
 .content-grid {
