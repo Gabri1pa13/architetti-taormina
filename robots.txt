@@ -1,10 +1,11 @@
 User-agent: *
 Allow: /
 
-# Non indicizzare il template master
+# Non indicizzare il template e gli asset
 Disallow: /article-template.html
 Disallow: /assets/
 Disallow: /private/
+Disallow: /seo-optimize.py
 
 # Posizione della sitemap
-Sitemap: https://architettitaormina.com/sitemap.xml
+Sitemap: https://architettitaormina.it/sitemap.xml
