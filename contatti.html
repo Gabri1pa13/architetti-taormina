@@ -25,6 +25,25 @@
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
     <link href="assets/css/styles.css" rel="stylesheet"/>
+    <style>
+        .af-form { display: grid; gap: 16px; margin: 25px 0 35px; padding: 30px; background: var(--bg-alt); border-radius: var(--radius); }
+        .af-form h3 { margin: 0; color: var(--dark); }
+        .af-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .af-field label { display: block; font-size: 0.8rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 1px; margin-bottom: 6px; }
+        .af-field input, .af-field select, .af-field textarea { width: 100%; box-sizing: border-box; padding: 12px; border: 1px solid #ddd; border-radius: var(--radius); font: inherit; font-size: 16px; background: #fff; color: var(--text); }
+        .af-field input, .af-field select { height: 50px; }
+        .af-field textarea { min-height: 110px; resize: vertical; }
+        .af-field input:focus, .af-field select:focus, .af-field textarea:focus { outline: none; border-color: var(--gold); }
+        .af-consent { display: flex; gap: 10px; align-items: flex-start; font-size: 0.85rem; line-height: 1.5; color: var(--text-light); cursor: pointer; }
+        .af-consent input { margin-top: 3px; flex-shrink: 0; accent-color: var(--gold); }
+        .af-consent a, .af-error a, .af-done a { color: var(--gold); text-decoration: underline; }
+        .af-form .btn-big { border: 0; cursor: pointer; font: inherit; font-weight: 600; justify-self: start; margin: 0; }
+        .af-error { margin: 0; color: #b3261e; font-size: 0.9rem; }
+        .af-done { margin: 25px 0 35px; padding: 30px; background: var(--bg-alt); border-radius: var(--radius); }
+        .af-done-title { font-size: 1.2rem; font-weight: 600; color: var(--dark); margin: 0 0 8px; }
+        .af-done-wa { margin: 0; }
+        @media (max-width: 768px) { .af-form, .af-done { padding: 22px; } .af-row { grid-template-columns: 1fr; } .af-form .btn-big { justify-self: stretch; } }
+    </style>
 </head>
 <body>
 
@@ -45,6 +64,28 @@
             <div>
                 <h2>Contatti Diretti</h2>
                 <p>Rispondiamo entro 24h lavorative. Per urgenze o sopralluoghi, consigliamo WhatsApp.</p>
+                <form class="af-form" id="richiesta-form" data-archflow="" data-lang="it" data-source="Richiesta dal sito Architetti Taormina — Contatti" data-wa="https://wa.me/393299736697" data-email="info@studio4e.it">
+                    <h3>Richiedi una consulenza</h3>
+                    <div class="af-row">
+                        <div class="af-field"><label for="af-nome">Nome e cognome *</label><input id="af-nome" data-af="name" type="text" autocomplete="name" maxlength="160" required></div>
+                        <div class="af-field"><label for="af-contatto">Email o telefono *</label><input id="af-contatto" data-af="contact" type="text" autocomplete="email" maxlength="160" required></div>
+                    </div>
+                    <div class="af-row">
+                        <div class="af-field"><label for="af-zona">Comune/zona dell'immobile</label><input id="af-zona" data-af="city" type="text" maxlength="80" placeholder="es. Taormina, Mazzarò"></div>
+                        <div class="af-field"><label for="af-tipo">Tipo di intervento</label><select id="af-tipo" data-af="type">
+                            <option value="">Seleziona…</option>
+                            <option>Hotel, B&amp;B o struttura ricettiva</option>
+                            <option>Negozio o locale commerciale</option>
+                            <option>Villa</option>
+                            <option>Ristrutturazione appartamento</option>
+                            <option>Permessi e vincoli (Soprintendenza)</option>
+                            <option>Altro</option>
+                        </select></div>
+                    </div>
+                    <div class="af-field"><label for="af-messaggio">Messaggio</label><textarea id="af-messaggio" maxlength="3500" placeholder="Immobile, obiettivo, tempi…"></textarea></div>
+                    <label class="af-consent" for="privacy-ok"><input id="privacy-ok" type="checkbox" required><span>Ho letto l'<a href="https://architettisicilia.it/privacy/" target="_blank" rel="noopener">informativa privacy</a> e acconsento al trattamento dei miei dati per essere ricontattato. *</span></label>
+                    <button class="btn-big" type="submit">Invia richiesta</button>
+                </form>
                 
                 <div class="c-item">
                     <span class="c-label">WhatsApp (Linea Prioritaria)</span>
@@ -71,5 +112,6 @@
         </div>
     </div>
 
+    <script src="assets/js/archflow-lead.js" defer></script>
 </body>
 </html>
